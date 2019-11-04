@@ -12,6 +12,9 @@ public class Main {
         System.out.println(myCharList.charAt(1));
         System.out.println(myCharList.indexOf('c'));
         System.out.println(myCharList.subString(1,3));
+        System.out.println(myCharList.removeDuplicates());
+        System.out.println(myCharList.isEmpty());
+        System.out.println(myCharList.contains('a'));
 
 
 //        System.out.println(charList);
