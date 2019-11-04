@@ -32,4 +32,9 @@ public class Charlist {
     public int indexOf(char c){
         return container.indexOf(c);
     }
+    List<Character> subString(int start, int end){
+        return container.subList(start,end);
+    }
+
+
 }

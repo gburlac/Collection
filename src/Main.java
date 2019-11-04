@@ -11,6 +11,7 @@ public class Main {
         System.out.println(myCharList.length());
         System.out.println(myCharList.charAt(1));
         System.out.println(myCharList.indexOf('c'));
+        System.out.println(myCharList.subString(1,3));
 
 
 //        System.out.println(charList);
