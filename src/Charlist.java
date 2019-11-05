@@ -86,6 +86,19 @@ public class Charlist {
         Collections.reverse(container);
         return new Charlist(container);
     }
+    public Charlist clearList(){
+        container.clear();
+        return new Charlist(container);
+    }
+    public  Charlist removeAll( Character c){
+        container.removeAll(Collections.singleton(c));
+        return new Charlist(container) ;
+
+    }
+    public Charlist removeFirst(Character c) {
+        container.remove(c);
+        return new Charlist(container);
+    }
 
 
 }
