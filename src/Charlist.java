@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Charlist {
@@ -18,6 +17,11 @@ public class Charlist {
         for (int i = 0; i < chars.length; i++) {
             container.add(chars[i]);
         }
+    }
+    private Charlist(List<Character> list){
+        container =new ArrayList<>();
+        container.addAll(list);
+
     }
 
     public List<Character> getContainer() {
@@ -54,23 +58,33 @@ public class Charlist {
         return getContainer().stream().distinct().collect(Collectors.toList());
     }
 
-    /*List<Character> replaceFirst(Character c) {
-        return container.stream().findFirst().
+   public Charlist replaceFirst(Character c) {
+        container.set(0,c);
+        return new Charlist(container);
     }
 
-    List<Character> removeAll() {
-        return getContainer().removeAll();
-    }*/
+
 
     public boolean isEmpty() {
         return container.isEmpty();
     }
-    public boolean contains(Character character){
-        return  container.contains(character);
+
+    public boolean contains(Character character) {
+        return container.contains(character);
     }
 
-    List<Character> charListSorted(){
-        return Collections.sort();
+    public Charlist sortedList(){
+        Collections.sort(container);
+        return new Charlist(container);
+    }
+   public Charlist mixedList(){
+        Collections.shuffle(container);
+        return new Charlist(container);
+    }
+
+    public Charlist reversList(){
+        Collections.reverse(container);
+        return new Charlist(container);
     }
 
 
