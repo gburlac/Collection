@@ -14,11 +14,13 @@ public class Main {
         System.out.println("Sub string: "+myCharList.subString(1,3));
         System.out.println("Remove Duplicates: "+myCharList.removeDuplicates());
         System.out.println("Is Empty: "+myCharList.isEmpty());
-        System.out.println("Contains: "+myCharList.contains('a'));
+        System.out.println("Contains a: "+myCharList.contains('a'));
+        System.out.println("Contains q: "+myCharList.contains('q'));
         System.out.println("MixedList: "+ myCharList.mixedList());
         System.out.println("Reverse list: "+myCharList.reversList());
         System.out.println("Sorted list: "+myCharList.sortedList());
         System.out.println("Replace first: "+myCharList.replaceFirst('1'));
+        System.out.println("Remove first: "+myCharList.removeFirst('1'));
 
                 }
     }
